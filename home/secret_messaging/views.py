@@ -13,7 +13,7 @@ def display_form(request):
         secret = form.data['secret']
         secret_string = make_string_invisible(secret)
         result = message + secret_string
-        return HttpResponse(result)
+        return render(request, 'secret_messaging/results_secret.html', {'secret_string': result})
     
 def reveal_secret(request):
     if request.method == 'GET':
@@ -24,7 +24,8 @@ def reveal_secret(request):
         secret_string = form.data['secret_string']
         secret = extract_important_symbols(secret_string)
         result = make_string_visible(secret)
-        return HttpResponse(result)
+        return render(request, 'secret_messaging/results_reveal.html', {'secret_string': result})
         
-
+def index(request):
+    return render(request, 'secret_messaging/index.html')
 
