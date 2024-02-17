@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('hide_secret/', views.display_form, name='secret_string'),
+    path('hide_secret/', views.create_secret, name='secret_string'),
     path('reveal_secret/', views.reveal_secret, name='reveal_secret'),
 ]
