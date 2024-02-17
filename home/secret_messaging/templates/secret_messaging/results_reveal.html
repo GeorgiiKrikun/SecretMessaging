@@ -11,8 +11,8 @@
         <a href="{% url 'reveal_secret' %}">Reveal secret</a>
     </div>
     <div class="content">
-        <p> Here is the secret string:  </p>
-        <p> {{ secret_string }} </p>
+        <p> Here is the secret message:  </p>
+        <input type = "text" value = "{{ secret_string }}" style="width:500px" readonly> 
     </div> 
 </body>
 </html>
