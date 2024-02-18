@@ -20,5 +20,19 @@
             // "preLaunchTask": "Start stripe redirection" ,
             // "terminateProcess": true
         },
+        {
+            "name": "Tests",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/home/manage.py",
+            "cwd": "${workspaceFolder}/home",
+            "args": [
+                "test",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            // "preLaunchTask": "Start stripe redirection" ,
+            // "terminateProcess": true
+        },
     ]
 }
