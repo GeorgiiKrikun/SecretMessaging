@@ -5,4 +5,4 @@ class create_secret_form(forms.Form):
     secret = forms.CharField(label='secret', max_length=200)
 
 class reveal_secret_form(forms.Form):
-    secret_string = forms.CharField(label='secret string', max_length=200)
+    secret_string = forms.CharField(label='secret string')
