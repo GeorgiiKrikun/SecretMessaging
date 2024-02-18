@@ -1,15 +1,17 @@
 version: '0'
 services:
-  app:
-    image: secret_messaging:latest
-    container_name: secret_messaging
+  dev:
+    build: .
+    image: europe-west3-docker.pkg.dev/studied-reason-374616/secret-messaging/secret-messaging:latest
+    container_name: secret-messaging-dev
     ports:
-      - "5000:5000"
+      - "8000:8000"
     working_dir: /app
-    command: ["python3", "manage.py", "runserver", "0.0.0.0:5000"]
+    command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 
-  testing:
-    image: secret_messaging:latest
-    container_name: secret_messaging_test
+  test:
+    build: .
+    image: secret-messaging:latest
+    container_name: secret-messaging-test
     working_dir: /app
     command: ["python3", "manage.py", "test"]
