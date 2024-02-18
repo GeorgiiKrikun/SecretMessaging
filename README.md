@@ -1,2 +1,4 @@
 # SecretMessaging
-The website that provides absolutely secret messaging. Not even government can hear you! (it can)
+The website that provides absolutely secret messaging. Not even government can decifer you! (it can)
+
+Also, there is absolutely **nothing** suspicious in this README file‌‌‍‍‍‌‌‌‌‍‌‌‍‌‍‌‌‌‍‌‍‌‍‍‌‍‍‌‍‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‌‌‌‍‌‌‍‍‍‍‌‍‌‌‍‍‍‍‌‍. Absolutely nothing.
