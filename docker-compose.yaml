@@ -1,0 +1,15 @@
+version: '0'
+services:
+  app:
+    image: secret_messaging:latest
+    container_name: secret_messaging
+    ports:
+      - "5000:5000"
+    working_dir: /app
+    command: ["python3", "manage.py", "runserver", "0.0.0.0:5000"]
+
+  testing:
+    image: secret_messaging:latest
+    container_name: secret_messaging_test
+    working_dir: /app
+    command: ["python3", "manage.py", "test"]
