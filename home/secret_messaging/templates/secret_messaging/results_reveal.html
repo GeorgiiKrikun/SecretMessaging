@@ -1,18 +1,19 @@
 {% load static %}
-<!DOCTYPE html>
 <html>
 <head>
-    <title>PRIVACY.PRIVACY.PRIVACY</title>
+    <title>reveal</title>
     <link rel="stylesheet" type="text/css" href="{% static 'secret_messaging/style.css' %}">
 </head>
 <body>
-    <div class="sidebar">
-        <a  href="{% url 'secret_string' %}">Create secret</a>
-        <a href="{% url 'reveal_secret' %}">Reveal secret</a>
-    </div>
-    <div class="content">
-        <p> Here is the secret message:  </p>
-        <input type = "text" value = "{{ secret_string }}" style="width:500px" readonly> 
-    </div> 
+      <div class="sidebar">
+        <a href="{% url 'secret_string' %}"><span>Create secret</span></a>
+        <a class="active" href="{% url 'reveal_secret' %}"><span>Reveal secret</span></a>
+      </div>
+      <div class="centered-content">
+        <div class="grid-container">
+            <label for="id_secret_string">Secret string:</label> 
+            <input type = "text" class="form-input" value = "{{ secret_string }}" style="width:500px" readonly> 
+        </div>
+      </div>
 </body>
 </html>
