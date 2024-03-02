@@ -25,6 +25,16 @@ function create_secret_button_pressed() {
     result_div.style.display = 'inline-flex';
 }
 
+function reveal_secret_button_pressed() {
+    var secret = document.getElementById('id_secret').value;
+    var result = reveal_secret(secret);
+    document.getElementById('id_secret_string').value = result;
+    var request_div = document.getElementById('id_request');
+    var result_div = document.getElementById('id_result');
+    request_div.style.display = 'none';
+    result_div.style.display = 'inline-flex';
+}
+
 function go_back() {
     var request_div = document.getElementById('id_request');
     var result_div = document.getElementById('id_result');
