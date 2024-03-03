@@ -31,7 +31,7 @@ home/secret_messaging/static/secret_messaging/external
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
-
+home/static
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
