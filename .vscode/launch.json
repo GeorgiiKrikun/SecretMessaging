@@ -13,8 +13,12 @@
             "args": [
                 "runserver",
                 "--noreload",
+                "0.0.0.0:8000",
                 // "--nothreading"
             ],
+            "env": {
+                "ALLOWED_HOSTS": "10.0.0.10"
+            },
             "console": "integratedTerminal",
             "justMyCode": true,
             // "preLaunchTask": "Start stripe redirection" ,

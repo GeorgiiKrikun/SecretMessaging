@@ -29,7 +29,9 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-ALLOWED_HOSTS += os.environ.get('ALLOWED_HOSTS').split(';')
+EXTERNAL_HOSTS = os.environ.get('ALLOWED_HOSTS')
+if EXTERNAL_HOSTS is not None:
+    ALLOWED_HOSTS += os.environ.get('ALLOWED_HOSTS').split(';')
 
 
 # Application definition
