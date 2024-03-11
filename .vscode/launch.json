@@ -17,12 +17,28 @@
                 // "--nothreading"
             ],
             "env": {
+                "ALLOWED_HOSTS": "10.0.0.10",
+                "DEBUG": "True",
+                "SECRET_KEY": "django-insecure-p_lyy7gv&4l!z#$(dam_3m^yhk-hc)=eal8nug#_-es9&s&p$^"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": true,
+        },
+        {
+            "name": "Check deployment",
+            "type": "python",k
+            "request": "launch",
+            "program": "${workspaceFolder}/home/manage.py",
+            "cwd": "${workspaceFolder}/home",
+            "args": [
+                "check",
+                "--deploy",
+            ],
+            "env": {
                 "ALLOWED_HOSTS": "10.0.0.10"
             },
             "console": "integratedTerminal",
             "justMyCode": true,
-            // "preLaunchTask": "Start stripe redirection" ,
-            // "terminateProcess": true
         },
         {
             "name": "Tests",
